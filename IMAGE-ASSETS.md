@@ -4,6 +4,8 @@ Save each file in `assets/images/` with the **exact** filename, as JPEG. Aim for
 
 **Note:** `voyager2_last_images.jpeg` is used by the Voyager 2 timeline (“Final images”, 1989) but is not in the original 31-file table, so there are 32 files.
 
+No new images are needed for the refinement pass: the video preview reuses `voyager1_deep_space.jpeg`.
+
 ## Hero and spacecraft
 - [ ] `voyager_spacecraft.jpeg` — hero: Voyager with high-gain antenna, instruments and Golden Record visible; plenty of dark space
 - [ ] `voyager1_spacecraft.jpeg` — Voyager 1

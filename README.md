@@ -10,6 +10,7 @@ Missing images show a labelled placeholder, so you can add them gradually. See `
 
 ## Editing
 - Timeline milestones, image filenames, credits and NASA links: `data/timeline.js`
+- Hero crop: tune `--hero-pos` (desktop) and `--hero-pos-m` (mobile) at the top of `styles.css` so the spacecraft stays in frame.
 - Mission status note (date-stamped): the `.status` block in `index.html`. **Re-check NASA’s Voyager pages before each publish**, and swap in NASA’s exact update link.
 - Image credits default to “NASA/JPL-Caltech”. Confirm each image’s real credit and override it with `credit:` in the data.
 

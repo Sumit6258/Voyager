@@ -31,11 +31,11 @@
 <figure class="ph hero-img" data-f="voyager_spacecraft.jpeg"><img src="assets/images/voyager_spacecraft.jpeg" alt="A Voyager spacecraft with its large dish antenna and Golden Record, floating against the dark" width="1600" height="1000" fetchpriority="high" decoding="async"></figure>
 <div class="wrap">
 <p class="mono up">Voyager 1 &amp; Voyager 2</p>
-<h1>Two machines. One small world. An endless journey.</h1>
+<h1><span>Two machines.</span> <span>One small world.</span> <span>An endless journey.</span></h1>
 <p class="lead">On a distant summer in 1977, humanity sent two machines towards the unknown. They are still travelling. And they are still carrying a little piece of Earth.</p>
 <p class="mono">Launched in 1977. Still travelling through interstellar space.</p>
 </div>
-<a class="scroll mono" href="#mission">Scroll</a>
+<a class="scroll" href="#mission"><span class="sr">Scroll to the mission</span></a>
 </header>
 
 <section id="mission"><div class="wrap">
@@ -78,6 +78,7 @@
 <h2>Forty-nine years, in order.</h2>
 <p class="lead">Hover over a milestone to see its photograph, or tap it on a phone. Hollow markers are projections, not events. Voyager 2 is on the left, Voyager 1 on the right.</p>
 <div class="flt" role="group" aria-label="Filter the timeline"><button type="button" data-f="all" aria-pressed="true">Both Voyagers</button><button type="button" data-f="v1" aria-pressed="false">Voyager 1</button><button type="button" data-f="v2" aria-pressed="false">Voyager 2</button></div>
+<div class="trk" aria-hidden="true"><span>Voyager 2</span><span>Voyager 1</span></div>
 <ol class="tl" id="tl"></ol>
 <noscript><p>The timeline needs JavaScript. The full history is on <a href="https://science.nasa.gov/mission/voyager/planetary-voyage/">NASA’s site</a>.</p></noscript>
 </div></section>
@@ -127,7 +128,7 @@
 <section id="video" class="alt"><div class="wrap">
 <div class="narrow"><h2>And the journey goes on.</h2>
 <p class="lead">We have followed its journey for nearly fifty years. But that is only the beginning of its story.</p></div>
-<div class="vid" id="vid"><button type="button" aria-label="Play video: VOYAGER 1: The Story of the Next 10 Trillion Years | 4K"><span class="play"></span><span class="mono">VOYAGER 1: The Story of the Next 10 Trillion Years</span></button></div>
+<div class="vid" id="vid"><figure class="ph" data-f="voyager1_deep_space.jpeg"><img src="assets/images/voyager1_deep_space.jpeg" alt="" width="1600" height="900" loading="lazy" decoding="async"></figure><button type="button" aria-label="Play video: VOYAGER 1: The Story of the Next 10 Trillion Years | 4K"><span class="play"></span><span class="mono">The Story of the Next 10 Trillion Years · 4K</span></button></div>
 <p class="cap" style="text-align:center">A film for storytelling, not a source for mission data; NASA and JPL remain the authority. <a href="https://youtu.be/hh7wfElw4g0" rel="noopener">Watch on YouTube ↗</a></p>
 </div></section>
 
@@ -136,17 +137,19 @@
 <p class="lead" style="margin-inline:auto">Voyager is one light-day away. A signal travelling at the speed of light would take an entire day to reach it.</p>
 <p class="lead" style="margin-inline:auto">We cannot realistically send this little light to the spacecraft. But we can still send a symbolic greeting. Say hello to Voyager.</p>
 <p class="vgr"><span aria-hidden="true">V ···− &nbsp; G −−· &nbsp; R ·−·</span><span class="sr">V: dot dot dot dash. G: dash dash dot. R: dot dash dot.</span></p>
-<button class="btn p send" id="send" type="button">SEND A SIGNAL</button>
+<button class="btn send" id="send" type="button">SEND A SIGNAL</button>
 <p class="cap">Flashes your screen in Morse code: VGR, Voyager’s call sign. Inspired by <a href="https://science.nasa.gov/specials/apps/voyager-one-light-day/" rel="noopener">NASA’s Voyager One Light-Day experience ↗</a></p>
 </div></section>
 
-<section id="far-future"><div class="narrow">
+<section id="far-future"><div class="wrap">
 <h2>Long after the mission ends.</h2>
 <p class="lead">Three different endings are easy to confuse.</p>
+<div class="ed">
 <h3>The science stops</h3><p>As electrical power declines, instruments are switched off one by one. The cameras are already off; neither Voyager is taking photographs.</p>
 <h3>The signal fades</h3><p>One day the spacecraft will be too weak to reach Earth. NASA offers estimates, not a date, and the exact end is unknown.</p>
 <h3>The journey continues</h3><p>The spacecraft themselves keep travelling, silent, long after the last message.</p>
 <h3>Not yet beyond the Solar System</h3><p>Entering interstellar space is not the same as leaving the Sun’s gravitational reach. The Oort Cloud extends far beyond, and NASA says reaching its inner region will take hundreds of years. The future milestones at the end of the <a href="#journey">timeline</a>, including passes of Gliese 445 and Ross 248 at about 1.7 light-years, are stellar flybys and mathematical projections, not visits or scheduled events.</p>
+</div>
 </div></section>
 
 <section class="end"><div class="narrow">
@@ -172,10 +175,15 @@
 
 <dialog id="warn" aria-labelledby="wt">
 <h3 id="wt">Before you begin</h3>
-<p>This will flash your whole screen between warm light and darkness, never more than twice a second. If you are sensitive to flashing lights or have photosensitive epilepsy, please don’t continue. You can stop at any time with the STOP button or the Esc key.</p>
-<p class="cap">It is a symbolic greeting: a phone screen cannot send a signal to a spacecraft.</p>
-<label><input type="checkbox" id="rep"> Repeat until I stop</label>
+<p>Choose how to see the signal. A phone screen cannot send anything to a spacecraft; this is a symbolic greeting.</p>
+<fieldset><legend class="sr">Display mode</legend>
+<label><input type="radio" name="mode" value="flash"><span><strong>Flashing light.</strong> The whole screen pulses between warm light and darkness, never more than twice a second. Not suitable if you are sensitive to flashing lights or have photosensitive epilepsy.</span></label>
+<label><input type="radio" name="mode" value="steady"><span><strong>No flashing.</strong> The screen stays dark. The pattern is shown as text, and each dot and dash is highlighted in turn.</span></label>
+</fieldset>
+<p class="cap" id="calm" hidden>Your device asks for reduced motion, so the non-flashing version is selected.</p>
+<label><input type="checkbox" id="rep"><span>Repeat until I stop</span></label>
 <div class="btns"><button class="btn p" id="go" type="button">Start the signal</button><button class="btn" id="no" type="button">Not now</button></div>
+<p class="cap">You can stop at any time with the STOP button or the Esc key.</p>
 </dialog>
 
 <div id="fl" hidden role="dialog" aria-modal="true" aria-label="Morse code signal: V, G, R">
