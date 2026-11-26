@@ -374,6 +374,12 @@ Source: [NASA Science, Golden Record Contents](https://science.nasa.gov/mission/
 
 Credit: NASA/JPL-Caltech.
 
+### theinterstellar.jpeg
+
+This photo shows gravitational lensing and many bright galaxies, but the smaller, fainter, less distinct galaxies in this image are some of the oldest light ever detected by a human-made object. (NASA | STScI)
+
+Source: [Webb Measures Distance to Farthest Fast Radio Burst, Suggesting Origin] (https://science.nasa.gov/mission/webb/)
+
 ---
 
 If you created or own the rights to an image shown here and would like its credit changed or the image removed, please contact the project owner through the website or its associated repository.
